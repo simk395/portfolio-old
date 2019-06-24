@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap');
+
+.main {
+  background: #333;
+}
+.intro {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./img/coffee.jpeg');
+  filter: brightness(0.7);
+  animation: enlarge 0.8s;
+  color: white;
+  font-family: 'Aguafina Script', cursive;
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
