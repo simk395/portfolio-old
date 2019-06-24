@@ -100,13 +100,18 @@ html {
   background: #eee;
 }
 
+.flickity-enabled:focus {
+  outline: none;
+}
+
 .carousel-cell {
-  width: 28%;
+  width: 25%;
   height: 200px;
   background: #8c8;
   counter-increment: gallery-cell;
+  opacity: 0.5;
 }
 
 .carousel-cell.is-selected {
-  background: #ed2;
+  opacity: 1;
 }

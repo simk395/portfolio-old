@@ -16,11 +16,24 @@ export class test1 extends Component {
           <div class='carousel-cell'>
             <img src='me.jpg' />
           </div>
-          <div class='carousel-cell' />
-          <div class='carousel-cell' />
-          <div class='carousel-cell' />
-          <div class='carousel-cell' />
-          <div class='carousel-cell' />
+          <div class='carousel-cell'>
+            <img src='me.jpg' />
+          </div>
+          <div class='carousel-cell'>
+            <img src='me.jpg' />
+          </div>
+          <div class='carousel-cell'>
+            <img src='me.jpg' />
+          </div>
+          <div class='carousel-cell'>
+            <img src='me.jpg' />
+          </div>
+          <div class='carousel-cell'>
+            <img src='me.jpg' />
+          </div>
+          <div class='carousel-cell'>
+            <img src='me.jpg' />
+          </div>
         </div>
       </section>
     );
