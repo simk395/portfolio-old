@@ -19,7 +19,7 @@ html {
 }
 
 /* first slide */
-.intro {
+#intro {
   height: 100vh;
   width: 100vw;
   background-image: url('./img/coffee.jpeg');
@@ -60,8 +60,53 @@ html {
 
 /* second slide */
 
-.bio {
+#bio {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(217, 217, 217);
+  font-size: 2rem;
+}
+.bio-right,
+.bio-left {
+  float: left;
+}
+
+/* left */
+.bio-left {
+  width: 25vw;
+}
+
+.me {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* right */
+.bio-right {
+  width: 75vw;
+}
+
+/* skills */
+
+#skills {
   height: 100vh;
   width: 100vw;
   background: white;
+}
+
+/* carousel test */
+
+.carousel {
+  background: #eee;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 200px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+}
+
+.carousel-cell.is-selected {
+  background: #ed2;
 }
