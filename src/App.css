@@ -92,10 +92,21 @@ html {
   height: 100vh;
   width: 100vw;
   background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .skills-icon {
   height: 15rem;
+}
+
+#skills-icon {
+  align-self: center;
+}
+
+.skills-text {
+  font-size: 2rem;
 }
 
 /* carousel || get fade effect into the sides */
@@ -109,11 +120,31 @@ html {
 
 .carousel-cell {
   width: 20%;
-  border: black 1px solid;
   height: 200px;
   opacity: 0.5;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-cell.is-selected {
   opacity: 1;
+  animation: selected-pop-out 0.5s;
+  -webkit-box-shadow: 2px 10px 13px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 2px 10px 13px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: 2px 10px 13px -1px rgba(0, 0, 0, 0.67);
+}
+
+@keyframes selected-pop-out {
+  from {
+    box-shadow: 0px 0px 0px 0px;
+  }
+  to {
+    -webkit-box-shadow: 2px 10px 13px -1px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 2px 10px 13px -1px rgba(0, 0, 0, 0.67);
+    box-shadow: 2px 10px 13px -1px rgba(0, 0, 0, 0.67);
+  }
+}
+
+.carousel-icon {
+  height: 100%;
 }
