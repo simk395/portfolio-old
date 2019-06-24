@@ -63,7 +63,7 @@ html {
 #bio {
   height: 100vh;
   width: 100vw;
-  background: rgb(217, 217, 217);
+  background: whitesmoke;
   font-size: 2rem;
 }
 .bio-right,
@@ -86,7 +86,7 @@ html {
   width: 75vw;
 }
 
-/* skills */
+/*  third section */
 
 #skills {
   height: 100vh;
@@ -94,8 +94,11 @@ html {
   background: white;
 }
 
-/* carousel test */
+.skills-icon {
+  height: 15rem;
+}
 
+/* carousel || get fade effect into the sides */
 .carousel {
   background: #eee;
 }
@@ -105,10 +108,9 @@ html {
 }
 
 .carousel-cell {
-  width: 25%;
+  width: 20%;
+  border: black 1px solid;
   height: 200px;
-  background: #8c8;
-  counter-increment: gallery-cell;
   opacity: 0.5;
 }
 
