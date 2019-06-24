@@ -12,29 +12,6 @@ export class test1 extends Component {
           <img className='skills-icon' src='./icons/javascript.png' />
         </div>
         <h1 className='skills-text'>Some tools that I enjoy using:</h1>
-        <div
-          className='main-carousel js-flickity'
-          data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": true, "autoPlay":3000 }'
-        >
-          <div className='carousel-cell'>
-            <img className='carousel-icon' src='./icons/react.png' />
-          </div>
-          <div className='carousel-cell'>
-            <img className='carousel-icon' src='./icons/postgres.png' />
-          </div>
-          <div className='carousel-cell'>
-            <img className='carousel-icon' src='./icons/rails.png' />
-          </div>
-          <div className='carousel-cell'>
-            <img className='carousel-icon' src='./icons/node.png' />
-          </div>
-          <div className='carousel-cell'>
-            <img className='carousel-icon' src='./icons/sass.png' />
-          </div>
-          <div className='carousel-cell'>
-            <img className='carousel-icon' src='./icons/mongodb.jpg' />
-          </div>
-        </div>
       </section>
     );
   }

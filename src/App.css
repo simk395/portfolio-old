@@ -18,6 +18,36 @@ html {
   background: #333;
 }
 
+/* Navbar */
+
+#nav {
+  height: 10vh;
+  position: fixed;
+  font-size: 5rem;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  z-index: 2;
+  animation: fade-in 2.5s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-icons {
+  margin-left: auto;
+}
+
+.nav-icon {
+  height: 2rem;
+}
+
 /* first slide */
 #intro {
   height: 100vh;
@@ -110,12 +140,16 @@ html {
 }
 
 /* carousel || get fade effect into the sides */
-.carousel {
-  background: #eee;
+.main-carousel {
+  width: 100vw;
 }
 
 .flickity-enabled:focus {
   outline: none;
+}
+
+.flickity-viewport {
+  width: 100vw;
 }
 
 .carousel-cell {

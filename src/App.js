@@ -7,17 +7,24 @@ import Header from './container/Header';
 import Test1 from './test1';
 import Landing from './container/Landing';
 import About from './components/About';
+import Skills from './container/Skills';
 
 function App() {
-  // window.onload = disableScroll;
-  // window.addEventListener('wheel', e => {
-  //   console.log(e);
-  //   if (e.deltaY > 0) {
-  //     window.scrollTo(0, 689);
-  //   } else {
-  //     window.scrollTo(0, 0);
-  //   }
-  // });
+  let i = 0;
+  window.onload = disableScroll;
+  window.addEventListener('wheel', e => {
+    let ids = ['intro', 'bio', 'skills'];
+    if (e.deltaY > 0 && i + 1 <= ids.length - 1) {
+      i += 1;
+      var elmnt = document.getElementById(ids[i]);
+      elmnt.scrollIntoView();
+    } else if (e.deltaY < 0 && i - 1 >= 0) {
+      i -= 1;
+      var elmnt = document.getElementById(ids[i]);
+      elmnt.scrollIntoView();
+    }
+    console.log(i);
+  });
 
   function disableScroll() {
     document.body.style.overflow = 'hidden';
@@ -28,9 +35,10 @@ function App() {
 
   return (
     <div className='main'>
+      <Navbar />
       <Landing />
       <About />
-      <Test1 />
+      <Skills />
     </div>
   );
 }
