@@ -11,20 +11,21 @@ import Skills from './container/Skills';
 
 function App() {
   let i = 0;
-  window.onload = disableScroll;
-  window.addEventListener('wheel', e => {
-    let ids = ['intro', 'bio', 'skills'];
-    if (e.deltaY > 0 && i + 1 <= ids.length - 1) {
-      i += 1;
-      var elmnt = document.getElementById(ids[i]);
-      elmnt.scrollIntoView();
-    } else if (e.deltaY < 0 && i - 1 >= 0) {
-      i -= 1;
-      var elmnt = document.getElementById(ids[i]);
-      elmnt.scrollIntoView();
-    }
-    console.log(i);
-  });
+  window.onload = enableScroll;
+  // window.addEventListener('wheel', e => {
+  //   e.stopPropagation();
+  //   let ids = ['intro', 'bio', 'skills'];
+  //   if (e.deltaY > 0 && i + 1 <= ids.length - 1) {
+  //     i += 1;
+  //     var elmnt = document.getElementById(ids[i]);
+  //     elmnt.scrollIntoView();
+  //   } else if (e.deltaY < 0 && i - 1 >= 0) {
+  //     i -= 1;
+  //     var elmnt = document.getElementById(ids[i]);
+  //     elmnt.scrollIntoView();
+  //   }
+  //   console.log(i);
+  // });
 
   function disableScroll() {
     document.body.style.overflow = 'hidden';

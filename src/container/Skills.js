@@ -6,10 +6,21 @@ export class Skills extends Component {
   render() {
     return (
       <section id='skills'>
-        <h1 className='skills-text'>Experienced with:</h1>
-        <Icons />
-        <h1 className='skills-text'>Some tools that I enjoy using:</h1>
-        <Carousel />
+        <div className='html'>
+          <div className='html-column'>
+            <span>H</span>yper <span>T</span>ext<span>M</span>arkup
+            <span>L</span>anguage
+          </div>
+          <img className='skills-icon' src='./icons/html5.png' />
+        </div>
+        <div className='css'>
+          <div className='css-column'>CSS</div>
+          <img className='skills-icon' src='./icons/css.png' />
+        </div>
+        <div className='js'>
+          <div className='js-column'>column</div>
+          <img className='skills-icon' src='./icons/javascript.png' />
+        </div>
       </section>
     );
   }

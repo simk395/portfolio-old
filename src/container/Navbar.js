@@ -7,7 +7,7 @@ export class Navbar extends Component {
   render() {
     return (
       <nav id='nav'>
-        Simon Kong
+        <p>Simon Kong</p>
         <div className='nav-icons'>
           <img className='nav-icon' src={Medium} />
           <img className='nav-icon' src={Linkedin} />

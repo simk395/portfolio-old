@@ -123,8 +123,73 @@ html {
   width: 100vw;
   background: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.html,
+.css,
+.js {
+  width: 33.3vw;
+  animation: degrow 1s;
+}
+
+.html {
+  background: url('./img/html.jpg');
+}
+
+.css {
+  background: url('./img/css.jpeg');
+}
+
+.js {
+  background: url('./img/js.jpeg');
+}
+
+.html:hover,
+.css:hover,
+.js:hover {
+  width: 400vw;
+  animation: grow 1s;
+}
+
+.html-column {
+  background: orangered;
+  height: 100%;
+  width: 8vw;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 5rem;
+}
+
+.css-column {
+  background: rgb(1, 111, 186);
+  height: 100%;
+  width: 8vw;
+}
+
+.js-column {
+  background: rgb(248, 224, 24);
+  height: 100%;
+  width: 8vw;
+}
+
+@keyframes grow {
+  from {
+    width: 33.3vw;
+  }
+  to {
+    width: 400vw;
+  }
+}
+
+@keyframes degrow {
+  from {
+    width: 400vw;
+  }
+  to {
+    width: 33.3vw;
+  }
 }
 
 .skills-icon {
@@ -146,10 +211,6 @@ html {
 
 .flickity-enabled:focus {
   outline: none;
-}
-
-.flickity-viewport {
-  width: 100vw;
 }
 
 .carousel-cell {
