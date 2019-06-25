@@ -135,43 +135,49 @@ html {
 }
 
 .html {
-  background: url('./img/html.jpg');
+  background: url('./img/html.png');
 }
 
 .css {
-  background: url('./img/css.jpeg');
+  background: url('./img/css.png');
+  background-size: cover;
 }
 
 .js {
-  background: url('./img/js.jpeg');
-}
-
-.html:hover,
-.css:hover,
-.js:hover {
-  width: 400vw;
-  animation: grow 1s;
+  background: url('./img/js.png');
+  background-size: cover;
 }
 
 .html-column {
   background: orangered;
   height: 100%;
-  width: 8vw;
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  font-size: 5rem;
+  width: 100%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .css-column {
   background: rgb(1, 111, 186);
   height: 100%;
-  width: 8vw;
+  width: 100%;
 }
 
 .js-column {
   background: rgb(248, 224, 24);
   height: 100%;
-  width: 8vw;
+  width: 100%;
+}
+
+.shrink {
+  width: 10%;
+  animation: shrink-column 0.5s;
+}
+
+.skills-grow {
+  width: 300vw;
+  animation: grow 1.5s;
 }
 
 @keyframes grow {
@@ -179,21 +185,33 @@ html {
     width: 33.3vw;
   }
   to {
-    width: 400vw;
+    width: 300vw;
   }
 }
 
 @keyframes degrow {
   from {
-    width: 400vw;
+    width: 300vw;
   }
   to {
     width: 33.3vw;
   }
 }
 
+@keyframes shrink-column {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 10%;
+  }
+}
+
 .skills-icon {
   height: 15rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 #skills-icon {
