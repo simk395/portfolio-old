@@ -225,29 +225,23 @@ html {
   height: 100vh;
   width: 100vw;
   background: white;
-}
-
-/* carousel || get fade effect into the sides */
-.main-carousel {
-  width: 100vw;
-}
-
-.flickity-enabled:focus {
-  outline: none;
-}
-
-.carousel-cell {
-  width: 20%;
-  height: 200px;
-  opacity: 0.5;
+  font-size: 10rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-}
-
-.carousel-cell.is-selected {
-  opacity: 1;
+  justify-items: space-evenly;
+  position: relative;
 }
 
 .carousel-icon {
-  height: 100%;
+  height: 175px;
+  width: 175px;
+}
+
+.tools-div {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
