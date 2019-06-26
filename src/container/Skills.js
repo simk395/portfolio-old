@@ -5,24 +5,38 @@ import Icons from '../components/Skillicons';
 export class Skills extends Component {
   shrinkColumn = e => {
     console.log(e);
-    const html = document.querySelector('.html');
-    const htmlCol = document.querySelector('.html-column');
-    const css = document.querySelector('.css');
-    const cssCol = document.querySelector('.css-column');
-    const js = document.querySelector('.js-column');
+    const html = document.querySelector('.html').classList;
+    const htmlCol = document.querySelector('.html-column').classList;
+    const css = document.querySelector('.css').classList;
+    const cssCol = document.querySelector('.css-column').classList;
+    const js = document.querySelector('.js').classList;
+    const jsCol = document.querySelector('.js-column').classList;
+    const g = 'skills-grow';
+    const s = 'shrink';
     switch (e.target.className) {
       case 'html-column':
-        e.target.classList.add('shrink');
-        html.classList.add('skills-grow');
-        css.classList.remove('skills-grow');
-        cssCol.classList.remove('shrink');
+        css.remove(g);
+        cssCol.remove(s);
+        js.remove(g);
+        jsCol.remove(s);
+        htmlCol.add(s);
+        html.add(g);
         break;
       case 'css-column':
-        e.target.classList.add('shrink');
-        css.classList.add('skills-grow');
-        html.classList.remove('skills-grow');
-        htmlCol.classList.remove('shrink');
-        console.log('hello');
+        html.remove(g);
+        htmlCol.remove(s);
+        js.remove(g);
+        jsCol.remove(s);
+        cssCol.add(s);
+        css.add(g);
+        break;
+      case 'js-column':
+        html.remove(g);
+        htmlCol.remove(s);
+        css.remove(g);
+        cssCol.remove(s);
+        jsCol.add(s);
+        js.add(g);
         break;
     }
   };
