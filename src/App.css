@@ -93,7 +93,7 @@ html {
 
 /* left */
 .bio-left {
-  width: 25vw;
+  width: 50vw;
 }
 
 .me {
@@ -101,7 +101,8 @@ html {
 
 /* right */
 .bio-right {
-  width: 75vw;
+  width: 50vw;
+  font-size: 5rem;
 }
 
 /*  Section: Skills */
@@ -125,13 +126,6 @@ html {
   flex-direction: row;
 }
 
-.html,
-.css,
-.js {
-  width: 33.3vw;
-  animation: degrow 1s;
-}
-
 .html {
   background: url('./img/html.jpg');
 }
@@ -142,6 +136,14 @@ html {
 
 .js {
   background: url('./img/js.jpg');
+}
+
+.html,
+.css,
+.js {
+  width: 33.3vw;
+  animation: degrow 1s;
+  background-size: cover;
 }
 
 .html-column,

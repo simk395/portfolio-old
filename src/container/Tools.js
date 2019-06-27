@@ -4,6 +4,7 @@ export class Tools extends Component {
   render() {
     return (
       <section id='tools'>
+        <h1>Some tools that I enjoy using:</h1>
         <div className='tools-div'>
           <img name='react' className='tools-icon' src='./icons/react.png' />
           <img className='tools-icon' src='./icons/postgres.png' />

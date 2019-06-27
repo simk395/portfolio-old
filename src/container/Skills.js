@@ -38,6 +38,13 @@ export class Skills extends Component {
         jsCol.add(s);
         js.add(g);
         break;
+      case 'skills-info':
+        html.remove(g);
+        htmlCol.remove(s);
+        css.remove(g);
+        cssCol.remove(s);
+        js.remove(g);
+        jsCol.remove(s);
     }
   };
 
@@ -47,7 +54,7 @@ export class Skills extends Component {
         <div className='skills-info'>
           <h1>As a developer</h1>
           <p>Specialize in Front-End Development.</p>
-          <p>Experienced in CSS, HTML, and JavaScript</p>
+          <p>Experienced in HTML, CSS, and JavaScript</p>
           <p>Keeps code efficient, readable, and scalable</p>
           <p>Always driven to learn the latest technologies.</p>
         </div>

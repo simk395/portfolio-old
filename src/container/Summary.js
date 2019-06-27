@@ -8,11 +8,10 @@ export class Summary extends Component {
           <img className='me' src='me.jpg' />
         </div>
         <div className='bio-right'>
-          <p>Hello. My name is Simon Kong. </p>
-          <p>I am a Full Stack developer based in New York. </p>
+          <p>Hi, I am Simon Kong, a Full Stack Developer based in New York. </p>
           <p>
             I graduated from Flatiron School to start a career in software
-            development
+            development.
           </p>
           <p>
             I study Computer Science at Queens College in Flushing, New York.
