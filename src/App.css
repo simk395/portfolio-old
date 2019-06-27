@@ -48,7 +48,7 @@ html {
   height: 2rem;
 }
 
-/* first slide */
+/* Section: Landing*/
 #intro {
   height: 100vh;
   width: 100vw;
@@ -77,24 +77,14 @@ html {
   font-family: 'Aguafina Script', cursive;
 }
 
-.contact {
-  font-size: 2rem;
-  text-decoration: none;
-  text-align: center;
-  color: white;
-  background: black;
-  height: 5rem;
-  width: 22.5rem;
-  border-radius: 5rem;
-}
-
-/* second slide */
+/* Section: Summary */
 
 #bio {
   height: 100vh;
   width: 100vw;
   background: whitesmoke;
   font-size: 2rem;
+  padding-top: 10vh;
 }
 .bio-right,
 .bio-left {
@@ -107,8 +97,7 @@ html {
 }
 
 .me {
-  margin-left: auto;
-  margin-right: auto;
+  height: width;
 }
 
 /* right */
@@ -116,15 +105,24 @@ html {
   width: 75vw;
 }
 
-/*  third section */
+/*  Section: Skills */
 
 #skills {
   height: 100vh;
   width: 100vw;
-  background: white;
+  background: whitesmoke;
+  display: flex;
+}
+
+.skills-info {
+  width: 50vw;
+  background: whitesmoke;
+}
+
+.skills-image {
+  width: 50vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .html,
@@ -219,7 +217,7 @@ html {
   font-size: 2rem;
 }
 
-/* section four */
+/* Section: Tools */
 
 #tools {
   height: 100vh;
@@ -234,14 +232,22 @@ html {
   position: relative;
 }
 
-.carousel-icon {
-  height: 175px;
-  width: 175px;
-}
-
 .tools-div {
   width: 50vw;
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+}
+
+.tools-icon {
+  height: 175px;
+  width: 175px;
+}
+
+/* Secion: Education */
+
+#education {
+  height: 100vh;
+  width: 100vw;
+  background: white;
 }

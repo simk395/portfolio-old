@@ -40,20 +40,24 @@ export class Skills extends Component {
         break;
     }
   };
+
   render() {
     return (
       <section onClick={this.shrinkColumn} id='skills'>
-        <div className='html'>
-          <div className='html-column'>HTML</div>
-          {/* <img className='skills-icon' src='./icons/html5.png' /> */}
-        </div>
-        <div className='css'>
-          <div className='css-column'>CSS</div>
-          {/* <img className='skills-icon' src='./icons/css.png' /> */}
-        </div>
-        <div className='js'>
-          <div className='js-column'>JS</div>
-          {/* <img className='skills-icon' src='./icons/javascript.png' /> */}
+        <div className='skills-info'>hello</div>
+        <div className='skills-image'>
+          <div className='html'>
+            <div className='html-column'>HTML</div>
+            {/* <img className='skills-icon' src='./icons/html5.png' /> */}
+          </div>
+          <div className='css'>
+            <div className='css-column'>CSS</div>
+            {/* <img className='skills-icon' src='./icons/css.png' /> */}
+          </div>
+          <div className='js'>
+            <div className='js-column'>JS</div>
+            {/* <img className='skills-icon' src='./icons/javascript.png' /> */}
+          </div>
         </div>
       </section>
     );
