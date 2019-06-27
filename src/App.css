@@ -82,7 +82,7 @@ html {
 #bio {
   height: 100vh;
   width: 100vw;
-  background: whitesmoke;
+  background: white;
   font-size: 2rem;
   padding-top: 10vh;
 }
@@ -97,7 +97,6 @@ html {
 }
 
 .me {
-  height: width;
 }
 
 /* right */
@@ -110,13 +109,14 @@ html {
 #skills {
   height: 100vh;
   width: 100vw;
-  background: whitesmoke;
   display: flex;
 }
 
 .skills-info {
   width: 50vw;
-  background: whitesmoke;
+  background: white;
+  font-size: 5rem;
+  padding-top: 10vh;
 }
 
 .skills-image {
@@ -134,35 +134,34 @@ html {
 
 .html {
   background: url('./img/html.jpg');
-  background-size: cover;
 }
 
 .css {
   background: url('./img/css.jpeg');
-  background-size: cover;
 }
 
 .js {
   background: url('./img/js.jpg');
-  background-size: cover;
+}
+
+.html-column,
+.css-column,
+.js-column {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 
 .html-column {
   background: orangered;
-  height: 100%;
-  width: 100%;
 }
 
 .css-column {
   background: rgb(1, 111, 186);
-  height: 100%;
-  width: 100%;
 }
 
 .js-column {
   background: rgb(248, 224, 24);
-  height: 100%;
-  width: 100%;
 }
 
 .shrink {
@@ -202,21 +201,6 @@ html {
   }
 }
 
-.skills-icon {
-  height: 15rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-#skills-icon {
-  align-self: center;
-}
-
-.skills-text {
-  font-size: 2rem;
-}
-
 /* Section: Tools */
 
 #tools {
@@ -229,7 +213,7 @@ html {
   align-items: center;
   justify-content: center;
   justify-items: space-evenly;
-  position: relative;
+  padding-top: 10vh;
 }
 
 .tools-div {
@@ -240,8 +224,8 @@ html {
 }
 
 .tools-icon {
-  height: 175px;
-  width: 175px;
+  height: 17.5rem;
+  width: 17.5rem;
 }
 
 /* Secion: Education */

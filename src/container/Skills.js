@@ -44,7 +44,13 @@ export class Skills extends Component {
   render() {
     return (
       <section onClick={this.shrinkColumn} id='skills'>
-        <div className='skills-info'>hello</div>
+        <div className='skills-info'>
+          <h1>As a developer</h1>
+          <p>Specialize in Front-End Development.</p>
+          <p>Experienced in CSS, HTML, and JavaScript</p>
+          <p>Keeps code efficient, readable, and scalable</p>
+          <p>Always driven to learn the latest technologies.</p>
+        </div>
         <div className='skills-image'>
           <div className='html'>
             <div className='html-column'>HTML</div>
