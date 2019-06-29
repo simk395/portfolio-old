@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 /* font-family: 'Aguafina Script', cursive; */
 /* font-family: 'Libre Franklin', sans-serif; */
 
@@ -40,8 +41,34 @@ html {
   }
 }
 
-.nav-icons {
+.nav-items {
   margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-paths {
+  width: 15vw;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.5rem;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-path {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-icons {
+  width: 10vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .nav-icon {

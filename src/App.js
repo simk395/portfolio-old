@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Summary from './container/Summary';
 import Navbar from './container/Navbar';
-import Tools from './container/Tools';
-import Landing from './container/Landing';
-import Skills from './container/Skills';
-import Education from './container/Education';
+import Home from './container/Home';
+import Projects from './container/Projects';
+import { Switch, Route } from 'react-router-dom';
+import Blogs from './container/Blogs';
 
 function App() {
   let i = 0;
@@ -35,11 +34,11 @@ function App() {
   return (
     <div className='main'>
       <Navbar />
-      <Landing />
-      <Summary />
-      <Skills />
-      <Tools />
-      <Education />
+      <Switch>
+        <Route path='/projects' component={Projects} />
+        <Route path='/blogs' component={Blogs} />
+        <Route path='/' component={Home} />
+      </Switch>
     </div>
   );
 }
