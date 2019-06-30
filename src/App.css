@@ -32,6 +32,10 @@ html {
   animation: fade-in 2.5s ease-in;
 }
 
+.inverse {
+  filter: inverse(1);
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
