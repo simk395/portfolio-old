@@ -33,7 +33,7 @@ html {
 }
 
 .inverse {
-  filter: inverse(1);
+  filter: invert(1);
 }
 
 @keyframes fade-in {
