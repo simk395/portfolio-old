@@ -21,6 +21,7 @@ export class Home extends Component {
     window.addEventListener('wheel', e => {
       const sections = document.querySelectorAll('section');
       const length = sections.length - 1;
+      const nav = document.querySelector('#nav');
       if (e.deltaY < 0 && i - 1 >= 0) {
         i--;
         sections[i].scrollIntoView();
@@ -28,6 +29,9 @@ export class Home extends Component {
         i++;
         sections[i].scrollIntoView();
       }
+      if (sections[i] === document.querySelector('#intro'))
+        nav.classList.add('inverse');
+      else nav.classList.remove('inverse');
     });
 
     return (

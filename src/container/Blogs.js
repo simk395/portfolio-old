@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Blogs extends Component {
   render() {
     document.body.style.overflow = 'initial';
-    return <div>blogs</div>;
+    return <div style={{ height: 6000 }}>blogs</div>;
   }
 }
 

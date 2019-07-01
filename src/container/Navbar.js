@@ -6,19 +6,29 @@ import Gmail from '../svg/gmail.png';
 import { Link } from 'react-router-dom';
 
 export class Navbar extends Component {
+  blackColor = () => {
+    const nav = document.querySelector('#nav');
+    nav.classList.remove('inverse');
+  };
+  whiteColor = () => {};
+
   render() {
     return (
-      <nav id='nav'>
+      <nav id='nav' className='inverse'>
         <p>Simon Kong</p>
         <div className='nav-items'>
           <div className='nav-paths'>
-            <Link className='nav-path' to='/'>
+            <Link onClick={this.changeColor} className='nav-path' to='/'>
               Home
             </Link>
-            <Link className='nav-path' to='/projects'>
+            <Link
+              onClick={this.changeColor}
+              className='nav-path'
+              to='/projects'
+            >
               Projects
             </Link>
-            <Link className='nav-path' to='/blogs'>
+            <Link onClick={this.changeColor} className='nav-path' to='/blogs'>
               Blogs
             </Link>
           </div>
