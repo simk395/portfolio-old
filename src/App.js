@@ -8,14 +8,14 @@ import Blogs from './container/Blogs';
 
 function App() {
   return (
-    <div className='main'>
+    <main>
       <Navbar />
       <Switch>
         <Route path='/projects' component={Projects} />
         <Route path='/blogs' component={Blogs} />
         <Route path='/' component={Home} />
       </Switch>
-    </div>
+    </main>
   );
 }
 

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 export class Landing extends Component {
   render() {
-    const { slideshow } = this.props;
     return (
-      <section id='intro'>
+      <section data-id='1' id='intro'>
         <h1 data-section='intro' className='greeting'>
           Hello, my name is Simon.
         </h1>

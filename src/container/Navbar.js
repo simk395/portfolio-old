@@ -14,7 +14,7 @@ export class Navbar extends Component {
 
   render() {
     return (
-      <nav id='nav' className='inverse'>
+      <nav>
         <p>Simon Kong</p>
         <div className='nav-items'>
           <div className='nav-paths'>

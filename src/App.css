@@ -13,15 +13,16 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-.main {
+main {
   background: #333;
 }
 
 /* Navbar */
 
-#nav {
+nav {
   height: 10vh;
   position: fixed;
   font-size: 5rem;

@@ -6,36 +6,29 @@ import Skills from './Skills';
 import Education from './Education';
 
 export class Home extends Component {
+  componentDidMount() {
+    const nav = document.querySelector('nav');
+    const home = document.querySelector('#home');
+    home.addEventListener('wheel', e => {
+      if (window.scrollY > window.innerHeight) {
+        nav.classList.add('inverse');
+      } else if (
+        nav.className.includes('inverse') &&
+        window.scrollY <= window.innerHeight
+      ) {
+        nav.classList.remove('inverse');
+      }
+    });
+  }
   //If i do not use scroll to top i need to use datasets for all elements
   //then i can use e.target.previous or next sibling to slideshow
   //need dataset because if i hover anything not <section> then i have to search for it
-
-  scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   render() {
-    let i = 0;
-    window.onload = this.scrollToTop;
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('wheel', e => {
-      const sections = document.querySelectorAll('section');
-      const length = sections.length - 1;
-      const nav = document.querySelector('#nav');
-      if (e.deltaY < 0 && i - 1 >= 0) {
-        i--;
-        sections[i].scrollIntoView();
-      } else if (e.deltaY > 0 && i + 1 <= length) {
-        i++;
-        sections[i].scrollIntoView();
-      }
-      if (sections[i] === document.querySelector('#intro'))
-        nav.classList.add('inverse');
-      else nav.classList.remove('inverse');
-    });
+    //get an array of all the sections
+    //save a variable of prev next and current
 
     return (
-      <div>
+      <div id='home'>
         <Landing />
         <Summary />
         <Skills />
