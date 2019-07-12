@@ -31,10 +31,11 @@ nav {
   align-items: center;
   z-index: 2;
   animation: fade-in 2.5s ease-in;
+  filter: invert(1);
 }
 
 .inverse {
-  filter: invert(1);
+  filter: invert(0);
 }
 
 @keyframes fade-in {
@@ -84,7 +85,6 @@ nav {
 #intro {
   height: 100vh;
   width: 100vw;
-  background-image: url('./img/coffee.jpeg');
   /* filter: brightness(0.7); */
   animation: enlarge 0.8s;
   color: white;
@@ -92,6 +92,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.welcome {
+  height: 100vh;
+  width: 100vw;
 }
 
 @keyframes enlarge {
@@ -268,4 +273,82 @@ nav {
   height: 100vh;
   width: 100vw;
   background: white;
+}
+
+/* Section: Repos */
+
+#repos {
+  height: 100vh;
+  width: 100vw;
+  background: whitesmoke;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabinet {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  position: absolute;
+  overflow-y: scroll;
+  height: 80vh;
+  width: 100vw;
+  bottom: 0;
+}
+
+.cabinet::-webkit-scrollbar {
+  width: 5px;
+}
+
+.files {
+  position: absolute;
+  background: white;
+  height: 90vh;
+  width: 100vw;
+  bottom: 0%;
+  left: 0%;
+}
+
+.file {
+  background: url('./img/cab.png');
+  height: 12.5rem;
+  width: 18rem;
+  background-size: cover;
+  position: relative;
+}
+
+.repo-title {
+  height: 68%;
+  width: 78%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-size: 1.1rem;
+  color: black;
+  overflow: hidden;
+  padding: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.repo-title:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.file-popup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.file-details {
+  height: 80%;
+  width: 35%;
+  background: white;
+  transform: translate(100%, 10%);
 }

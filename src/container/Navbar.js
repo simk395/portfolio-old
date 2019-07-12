@@ -7,10 +7,14 @@ import { Link } from 'react-router-dom';
 
 export class Navbar extends Component {
   blackColor = () => {
-    const nav = document.querySelector('#nav');
-    nav.classList.remove('inverse');
+    const nav = document.querySelector('nav');
+    nav.classList.add('inverse');
   };
-  whiteColor = () => {};
+
+  whiteColor = () => {
+    const nav = document.querySelector('nav');
+    if (nav.className.includes('inverse')) nav.classList.remove('inverse');
+  };
 
   render() {
     return (
@@ -18,17 +22,16 @@ export class Navbar extends Component {
         <p>Simon Kong</p>
         <div className='nav-items'>
           <div className='nav-paths'>
-            <Link onClick={this.changeColor} className='nav-path' to='/'>
+            <Link onClick={this.whiteColor} className='nav-path' to='/'>
               Home
             </Link>
-            <Link
-              onClick={this.changeColor}
-              className='nav-path'
-              to='/projects'
-            >
+            <Link onClick={this.blackColor} className='nav-path' to='/projects'>
               Projects
             </Link>
-            <Link onClick={this.changeColor} className='nav-path' to='/blogs'>
+            <Link onClick={this.blackColor} className='nav-path' to='/repos'>
+              Repos
+            </Link>
+            <Link onClick={this.blackColor} className='nav-path' to='/blogs'>
               Blogs
             </Link>
           </div>

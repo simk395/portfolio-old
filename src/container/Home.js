@@ -7,26 +7,24 @@ import Education from './Education';
 
 export class Home extends Component {
   componentDidMount() {
-    const nav = document.querySelector('nav');
     const home = document.querySelector('#home');
-    home.addEventListener('wheel', e => {
-      if (window.scrollY > window.innerHeight) {
-        nav.classList.add('inverse');
-      } else if (
-        nav.className.includes('inverse') &&
-        window.scrollY <= window.innerHeight
-      ) {
-        nav.classList.remove('inverse');
-      }
-    });
+    home.addEventListener('wheel', this.blackNav);
   }
-  //If i do not use scroll to top i need to use datasets for all elements
-  //then i can use e.target.previous or next sibling to slideshow
-  //need dataset because if i hover anything not <section> then i have to search for it
-  render() {
-    //get an array of all the sections
-    //save a variable of prev next and current
 
+  blackNav = e => {
+    console.log(e);
+    const nav = document.querySelector('nav');
+    if (window.scrollY > window.innerHeight) {
+      nav.classList.add('inverse');
+    } else if (
+      nav.className.includes('inverse') &&
+      window.scrollY <= window.innerHeight
+    ) {
+      nav.classList.remove('inverse');
+    }
+  };
+
+  render() {
     return (
       <div id='home'>
         <Landing />
