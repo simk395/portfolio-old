@@ -8,34 +8,22 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 62.5%;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-main {
-  background: #333;
+  background: whitesmoke;
 }
 
 /* Navbar */
-
 nav {
   height: 10vh;
   position: fixed;
-  font-size: 5rem;
   display: flex;
-  width: 100vw;
+  width: 100%;
   align-items: center;
-  z-index: 2;
   animation: fade-in 2.5s ease-in;
-  filter: invert(1);
-}
-
-.inverse {
-  filter: invert(0);
 }
 
 @keyframes fade-in {
@@ -70,176 +58,46 @@ nav {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.nav-icons {
-  width: 10vw;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .nav-icon {
-  height: 2rem;
-}
-
-/* Section: Landing*/
-#intro {
-  height: 100vh;
-  width: 100vw;
-  /* filter: brightness(0.7); */
-  animation: enlarge 0.8s;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.welcome {
-  height: 100vh;
-  width: 100vw;
-}
-
-@keyframes enlarge {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-.greeting {
-  font-size: 7rem;
-  letter-spacing: 0.5rem;
-  font-family: 'Aguafina Script', cursive;
+  height: 1em;
 }
 
 /* Section: Summary */
 
 #bio {
-  height: 100vh;
-  width: 100vw;
-  background: white;
-  font-size: 2rem;
-  padding-top: 10vh;
-}
-.bio-right,
-.bio-left {
-  float: left;
-}
-
-/* left */
-.bio-left {
-  width: 50vw;
-}
-
-.me {
-}
-
-/* right */
-.bio-right {
-  width: 50vw;
-  font-size: 5rem;
-}
-
-/*  Section: Skills */
-
-#skills {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-}
-
-.skills-info {
-  width: 50vw;
-  background: white;
-  font-size: 5rem;
-  padding-top: 10vh;
-}
-
-.skills-image {
-  width: 50vw;
-  display: flex;
-  flex-direction: row;
-}
-
-.html {
-  background: url('./img/html.jpg');
-}
-
-.css {
-  background: url('./img/css.jpeg');
-}
-
-.js {
-  background: url('./img/js.jpg');
-}
-
-.html,
-.css,
-.js {
-  width: 33.3vw;
-  animation: degrow 1s;
-  background-size: cover;
-}
-
-.html-column,
-.css-column,
-.js-column {
-  height: 100%;
+  height: 30em;
   width: 100%;
-  cursor: pointer;
+  background-image: url('./NY.png');
+  background-size:cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
 }
 
-.html-column {
-  background: orangered;
+.bio-pic{
+  height:12em;
+  width: 12em;
+  border-radius: 50%;
 }
 
-.css-column {
-  background: rgb(1, 111, 186);
+.bio-details{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background: whitesmoke;
+  width: 50%;
+  padding: 0.5em;
 }
 
-.js-column {
-  background: rgb(248, 224, 24);
+.btn{
+  background: white;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 50px;
 }
-
-.shrink {
-  width: 10%;
-  animation: shrink-column 0.5s;
-}
-
-.skills-grow {
-  width: 300vw;
-  animation: grow 1.5s;
-}
-
-@keyframes grow {
-  from {
-    width: 33.3vw;
-  }
-  to {
-    width: 300vw;
-  }
-}
-
-@keyframes degrow {
-  from {
-    width: 300vw;
-  }
-  to {
-    width: 33.3vw;
-  }
-}
-
-@keyframes shrink-column {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 10%;
-  }
-}
-
 /* Section: Tools */
 
 #tools {
@@ -265,14 +123,6 @@ nav {
 .tools-icon {
   height: 17.5rem;
   width: 17.5rem;
-}
-
-/* Secion: Education */
-
-#education {
-  height: 100vh;
-  width: 100vw;
-  background: white;
 }
 
 /* Section: Repos */
@@ -351,4 +201,57 @@ nav {
   width: 35%;
   background: white;
   transform: translate(100%, 10%);
+}
+
+
+/*Section: Skills*/
+
+#skill{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  width:50%;
+  margin: 2em 25%;
+}
+
+.skill-list{
+  padding:1em;
+  border: 1px solid black;
+  transition: all .2s;
+}
+
+.skill-list:hover{
+  -webkit-box-shadow: 0px 9px 5px -3px rgba(0,0,0,0.19);
+  -moz-box-shadow: 0px 9px 5px -3px rgba(0,0,0,0.19);
+  box-shadow: 0px 9px 5px -3px rgba(0,0,0,0.19);
+}
+
+.skill-icon{
+  height:1em;
+  width:1em;
+}
+
+.education-list{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.education-img{
+  height: 10em;
+  transition: all .2s;
+}
+
+.education-img:hover{
+  transform: scale(1.5);
+}
+
+.list-item{
+  list-style: none;
+}
+
+footer{
+  background: rgb(81,107,130);
+  width:100%;
+  height:2em;
+ 
 }
