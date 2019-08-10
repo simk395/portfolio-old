@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 
 export class Projects extends Component {
+  state = {
+    videos: []
+  }
+
   componentDidMount() {
-    fetch('https://api.github.com/users/simk395/repos')
+    fetch(`https://www.googleapis.com/youtube/v3/playlistItems/?key=${process.env.REACT_APP_SECRET}&part=snippet&playlistId=PLXioOEumDzT0lLGN0SIcRnOSh6MC6ABwS`)
       .then(resp => resp.json())
-      .then(resp => console.log(resp));
+      .then(youtube => this.setState({ videos: youtube.items }))
   }
 
   render() {
-    document.body.style.overflow = 'initial';
-    return <div>Hello</div>;
+    const { videos } = this.state
+    console.log(videos)
+    return <div>
+      <ul>
+        <li> <iframe width="420" height="280" src="https://www.youtube.com/embed/mhgS6TNkX9Q" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+      </ul>
+    </div>;
   }
 }
 

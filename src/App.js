@@ -4,9 +4,9 @@ import Navbar from './container/Navbar';
 import Home from './container/Home';
 import Projects from './container/Projects';
 import { Switch, Route } from 'react-router-dom';
-import Blogs from './container/Blogs';
 import Repository from './container/Repository';
 
+require('dotenv').config()
 function App() {
   return (
     <main>
@@ -14,7 +14,6 @@ function App() {
       <Switch>
         <Route path='/projects' component={Projects} />
         <Route path='/repos' component={Repository} />
-        <Route path='/blogs' component={Blogs} />
         <Route path='/' component={Home} />
       </Switch>
     </main>

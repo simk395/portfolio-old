@@ -17,7 +17,7 @@ export class Navbar extends Component {
 
   render() {
     let icons = [Medium, Linkedin, Github, Gmail]
-    let links = ['Home', 'Projects', 'Repos', 'Blogs']
+    let links = ['Home', 'Projects', 'Repos']
     return (
       <nav>
         {links.map(link => this.createLink(link))}
