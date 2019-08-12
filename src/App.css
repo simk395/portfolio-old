@@ -83,6 +83,13 @@ nav {
   align-items:center;
 }
 
+.bio-name{
+  text-shadow: 	-1px -1px 0 #fff,
+  1px -1px 0 #fff,
+  -1px 1px 0 #fff,
+  1px 1px 0 #fff;
+}
+
 .bio-pic{
   height:12em;
   width: 12em;
