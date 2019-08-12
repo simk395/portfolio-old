@@ -17,7 +17,7 @@ export class Repository extends Component {
       <div id='repos' className="page">
         <h2>Most Recent Repositories</h2>
         <ol>
-          {repos.map(repo => <li className="repos-list-item"><a href={repo.html_url}>{repo.name}</a></li>)}
+          {repos.map(repo => <li key={repo.name} className="repos-list-item"><a href={repo.html_url}>{repo.name}</a></li>)}
         </ol>
       </div>
     );

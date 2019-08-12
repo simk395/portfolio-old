@@ -29,20 +29,25 @@ export class Navbar extends Component {
   }
 
   createIcon = (name) => {
-    return <a href={name.source[1]} target='_blank'>
+    return <a key={name.source[0]} href={name.source[1]} target='_blank' rel="noopener noreferrer">
       <img
         className='nav-icon'
         src={name.source[0]}
-        alt={`${name.source[0]} icon`} />
+        alt={`${name.source[1]} icon`} />
     </a>
   }
 
   createLink = (name) => {
-    return <Link className="nav-path" to={`/${name}`}>{name}</Link>
+    return <Link key={`${name}`} className="nav-path" to={`/${name}`}>{name}</Link>
   }
 
   createLinkIcon = (name) => {
-    return <Link to={`/${name.source[1]}`}><img className='nav-icon' src={name.source[0]} /></Link>
+    return <Link to={`/${name.source[1]}`}>
+      <img
+        className='nav-icon'
+        src={name.source[0]}
+        alt={`${name.source[1]} icon`} />
+    </Link>
   }
 
   render() {

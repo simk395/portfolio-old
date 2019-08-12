@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class File extends Component {
+export const File = () => {
   handleClick = e => {
     console.log(e.target);
 
@@ -15,15 +15,14 @@ export class File extends Component {
     repos.append(popup);
   };
 
-  render() {
-    const { name } = this.props;
+  const { name } = this.props;
 
-    return (
-      <div onClick={this.handleClick} className='file'>
-        <h6 className='repo-title'>{name}</h6>
-      </div>
-    );
-  }
+  return (
+    <div onClick={this.handleClick} className='file'>
+      <h6 className='repo-title'>{name}</h6>
+    </div>
+  );
+
 }
 
 export default File;

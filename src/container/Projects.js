@@ -13,14 +13,15 @@ export class Projects extends Component {
 
   embedVideos = (video) => {
     const { snippet } = video
-    return <li className="list-item project-list-item">
+    return <li key={snippet.resourceId.videoId} className="list-item project-list-item">
       <iframe
         className="video"
+        title={`${snippet.title}`}
         width="420"
         height="280"
         src={`https://www.youtube.com/embed/${snippet.resourceId.videoId}`}
         allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
+        allowFullScreen>
       </iframe>
       <p>{snippet.title}</p>
     </li>
