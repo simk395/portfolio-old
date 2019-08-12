@@ -3,7 +3,7 @@ import React from 'react';
 export const Summary = () => {
   return (
     <section id='bio'>
-      <img className='bio-pic' src='me.jpg' alt="Simon Kong" />
+      <img className='bio-pic' src='./images/me.jpg' alt="Simon Kong" />
       <h3 className='bio-name'>Simon Kong</h3>
       <a className='btn' href="mailto:skongnyc@gmail.com">Contact</a>
       <div className='bio-details'>
