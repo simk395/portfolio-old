@@ -6,17 +6,31 @@ export class Projects extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://www.googleapis.com/youtube/v3/playlistItems/?key=${process.env.REACT_APP_SECRET}&part=snippet&playlistId=PLXioOEumDzT0lLGN0SIcRnOSh6MC6ABwS`)
+    fetch(`https://www.googleapis.com/youtube/v3/playlistItems/?key=${process.env.REACT_APP_STUFF}&part=snippet&playlistId=PLXioOEumDzT0lLGN0SIcRnOSh6MC6ABwS`)
       .then(resp => resp.json())
       .then(youtube => this.setState({ videos: youtube.items }))
   }
 
+  embedVideos = (video) => {
+    const { snippet } = video
+    return <li className="list-item project-list-item">
+      <iframe
+        className="video"
+        width="420"
+        height="280"
+        src={`https://www.youtube.com/embed/${snippet.resourceId.videoId}`}
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <p>{snippet.title}</p>
+    </li>
+  }
+
   render() {
     const { videos } = this.state
-    console.log(videos)
-    return <div>
-      <ul>
-        <li> <iframe width="420" height="280" src="https://www.youtube.com/embed/mhgS6TNkX9Q" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+    return <div id="project" className="page">
+      <ul className="project-list">
+        {videos.map(video => this.embedVideos(video))}
       </ul>
     </div>;
   }

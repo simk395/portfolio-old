@@ -5,6 +5,7 @@ export class Summary extends Component {
     return (
       <section id='bio'>
         <img className='bio-pic' src='me.jpg' />
+        <h3 className='bio-name'>Simon Kong</h3>
         <a className='btn' href="mailto:skongnyc@gmail.com">Contact</a>
         <div className='bio-details'>
           <p>Full Stack Software Engineer based in New York who specializes in front-end development.</p>

@@ -14,11 +14,12 @@ export class Repository extends Component {
   render() {
     const { repos } = this.state
     return (
-      <section id='repos'>
+      <div id='repos' className="page">
+        <h2>Most Recent Repositories</h2>
         <ol>
-          {repos.map(repo => <li><a href={repo.html_url}>{repo.name}</a></li>)}
+          {repos.map(repo => <li className="repos-list-item"><a href={repo.html_url}>{repo.name}</a></li>)}
         </ol>
-      </section>
+      </div>
     );
   }
 }

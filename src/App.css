@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
-/* font-family: 'Aguafina Script', cursive; */
-/* font-family: 'Libre Franklin', sans-serif; */
 
 * {
   margin: 0;
@@ -12,17 +8,33 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   background: whitesmoke;
 }
 
+/*Footer*/
+
+footer{
+  background: rgb(81,107,130);
+  display:flex;
+  width:100%;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+  font-weight:600;
+}
+
 /* Navbar */
+
 nav {
   height: 10vh;
-  position: fixed;
+  position: absolute;
+  top:0;
   display: flex;
   width: 100%;
-  align-items: center;
+  justify-content: flex-end;
   animation: fade-in 2.5s ease-in;
 }
 
@@ -35,21 +47,15 @@ nav {
   }
 }
 
-.nav-items {
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-paths {
-  width: 15vw;
-  display: flex;
+.nav-container{
+  display:flex;
   justify-content: space-evenly;
-  font-size: 2.5rem;
   align-items: center;
-  text-decoration: none;
-}
+  width: 25em;
+  height:100%;
+  font-size:1.1em;
 
+}
 .nav-path {
   text-decoration: none;
   color: black;
@@ -73,7 +79,7 @@ nav {
   background-position: center center;
   display:flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items:center;
 }
 
@@ -91,43 +97,16 @@ nav {
   background: whitesmoke;
   width: 50%;
   padding: 0.5em;
+  margin-bottom:2em;
 }
 
 .btn{
-  background: white;
+  background: black;
   padding: 0.5em 1em 0.5em 1em;
+  margin:1em;
   border-radius: 50px;
-}
-/* Section: Tools */
-
-#tools {
-  height: 100vh;
-  width: 100vw;
-  background: white;
-  font-size: 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-items: space-evenly;
-  padding-top: 10vh;
-}
-
-.tools-div {
-  width: 50vw;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.tools-icon {
-  height: 17.5rem;
-  width: 17.5rem;
-}
-
-/* Section: Repos */
-
-#repos {
+  text-decoration: none;
+  color:white;
 }
 
 /*Section: Skills*/
@@ -138,6 +117,10 @@ nav {
   align-items: center;
   width:50%;
   margin: 2em 25%;
+}
+
+#skill h4{
+  margin-bottom:1em;
 }
 
 .skill-list{
@@ -157,9 +140,22 @@ nav {
   width:1em;
 }
 
+/* Section: Education */
+
+#education{
+ display:flex;
+ flex-direction: column;
+}
+
+#education h4{
+  align-self:center;
+  margin-bottom:2em;
+
+}
 .education-list{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 3em;
 }
 
 .education-img{
@@ -175,9 +171,98 @@ nav {
   list-style: none;
 }
 
-footer{
-  background: rgb(81,107,130);
-  width:100%;
-  height:2em;
- 
+
+/* Section: Repos */
+
+#repos {
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#repos h2{
+  margin-bottom:1em;
+}
+
+.repos-list-item a{
+ text-decoration: none;
+}
+
+.repos-list-item a:hover{
+  text-decoration: underline
+}
+
+/* Section: Projects */
+
+#project{
+  height:100%;
+  padding-top: 10vh;
+  min-height:85vh;
+}
+
+.project-list{
+  height:100%;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 3em 5em;
+}
+
+.project-list-item{
+  display:flex;
+  flex-direction: column;
+}
+.project-list-item p{
+  margin:1em 0;
+  font-weight: 500;
+  align-self:center;
+}
+
+
+/*reponsive*/
+
+.page{
+  padding: 10vh 0 5vh 0;
+  min-height:85vh;
+}
+
+@media (max-width: 1024px){
+  nav{
+    width: 3em;
+    height: 100%;    
+    background:black;
+    position:fixed;
+    left: 0;
+  }
+
+  .nav-container{
+    flex-direction: column;
+    height:50%;
+  }
+
+  .nav-path{
+    color:white;
+  }
+
+  .nav-icon{
+    filter: invert(1);
+  }
+
+  .page{
+    min-height: 95vh;
+    padding: 0 0 5vh 3em;
+  }
+
+  #repos h2{
+    margin:1em 0;
+  }
+}
+
+@media (max-width: 894px){
+  .education-list{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
 }
