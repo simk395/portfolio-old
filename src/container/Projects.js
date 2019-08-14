@@ -6,7 +6,7 @@ export class Projects extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://www.googleapis.com/youtube/v3/playlistItems/?key=${process.env.REACT_APP_STUFF}&part=snippet&playlistId=PLXioOEumDzT0lLGN0SIcRnOSh6MC6ABwS`)
+    fetch(`https://www.googleapis.com/youtube/v3/playlistItems/?key=${process.env.REACT_APP_STUFF}&part=snippet&playlistId=PLXioOEumDzT0lLGN0SIcRnOSh6MC6ABwS&maxResults=50`)
       .then(resp => resp.json())
       .then(youtube => this.setState({ videos: youtube.items }))
   }

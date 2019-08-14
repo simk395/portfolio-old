@@ -15,7 +15,7 @@ export const Skill = () => {
 
 
     const skills = {
-        frameworks: ['Electron', 'React', 'ExpressJS', 'MongooseJS', 'SASS', 'Bootstrap', 'Materialize', 'Semantic'],
+        frameworks: ['Electron', 'React', 'ExpressJS', 'MongooseJS', 'SASS', 'Bootstrap', 'Materialize', 'Semantic', 'Webpack'],
         proficient: ['Javascript', 'NodeJS', 'Ruby', 'HTML5', 'CSS3'],
         exposure: ['Python', 'Java', 'C++', 'Autohotkey', 'VBA'],
         database: ['Postgresql', 'Sqlite', 'MongoDB']
@@ -24,7 +24,7 @@ export const Skill = () => {
         <section id='skill'>
             <h4>Skills</h4>
             <ul className="skill-list">
-                {createSkills('Frameworks', skills.frameworks)}
+                {createSkills('Frameworks/Libraries', skills.frameworks)}
                 {createSkills('Proficient', skills.proficient)}
                 {createSkills('Exposure', skills.exposure)}
                 {createSkills('Database', skills.database)}
